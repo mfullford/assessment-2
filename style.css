@@ -1,0 +1,54 @@
+font-face {
+    font-family: 'tronFont'; 
+    src: ('downloads/TRON.ttf'); 
+	format: ('opentype');
+}
+* {
+	font-family: 'tronFont', monospace;
+}
+.container {
+	background-image: url("http://pre12.deviantart.net/da7f/th/pre/i/2013/012/e/b/another_tron_type_floor_by_taz09-d5rbmoq.png");
+	background-size: 100%;
+	position: relative;
+	width: 400px;
+}
+.moto {
+	position: absolute;
+}
+#motorcycleOne {
+	height: 50px;
+	margin-top: 80px;
+	width: 100px;
+}
+#motorcycleTwo {
+	height: 50px;
+	margin-top: 100px;
+	width: 100px;
+}
+.heading {
+	height: 15%;
+	margin-left: 120%;
+	margin-top: 85px;
+	width: 80%;
+
+}
+
+
+
+/*-----------landing-page-------------*/
+
+ .container2 {
+	background-color: Black;
+}
+.start {
+	display: block;
+	margin: 0 auto;
+	margin-top: 200px;
+    width: 40%;
+}
+.begin {
+	display: block;
+    margin: 0 auto;
+    margin-top: 30px;
+    width: 40%;
+}
