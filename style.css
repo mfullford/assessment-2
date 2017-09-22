@@ -39,23 +39,54 @@ font-face {
 
  .container2 {
 	background-color: Black;
+	color: #FFFFFF;
+	text-decoration: none;
 }
 .start {
 	display: block;
 	margin: 0 auto;
 	margin-top: 100px;
 	padding-top: 100px;
-	padding-bottom: 200px;
+	padding-bottom: 80px;
     width: 40%;
 }
-.begin {
+
+#begin {
+	
 	display: block;
-    margin: 0 auto;
-    margin-top: 30px;
-    width: 40%;
+	margin: 0 auto;
+    margin-bottom: 35px;
+    width: 30%;
+    height: 13%;
+    border: 5px solid #00cefb;
+    text-decoration: none;
+    text-align: center;
+    padding-top: 40px;
+    background-color: rgba(2, 218, 234, .50);
+    border-radius: 5px;
+    position: relative;
+    font-size: xx-large;
+    animation: flashText .5s ease-out alternate infinite;
+    text-shadow: 0vw 0vw 1vw #00cefb;
+    text-shadow: 
+    -.1vw 0vw .25vw #03E6F7, -.2vw 0vw .25vw #03E6F7, -.4vw 0vw .25vw #03E6F7, 
+    -.1vw 0vw .1vw #04d0df, -.2vw 0vw .1vw #04d0df, -.4vw 0vw .1vw #04d0df,
+    -.1vw 0vw .8vw #04d0df, -.2vw 0vw .8vw #00CC2A, -.4vw 0vw .8vw #04d0df, .2vw 0vw .5vw #04d0df,
+    -.1vw 0vw .5vw #04d0df, -.2vw 0vw .5vw #04d0df, -.4vw 0vw .5vw #04d0df, 
+    -.1vw 0vw 10vw #02daea, -.2vw 0vw 10vw #02daea, -.4vw 0vw 10vw #02daea;
 }
 
-    Make responsive for mobile and tablets
-Include a media query for a tablet to make your pages responsive
+#begin a {
+	color: #FFFFFF;
+	text-decoration: none !;
+}
 
+
+/*    Make responsive for mobile and tablets
+Include a media query for a tablet to make your pages responsive*/
+
+
+/*    color: #03E6F7;
+    border: 5px solid #03E6F7;
+    background-color: rgba(3, 230, 247, .40);*/
 

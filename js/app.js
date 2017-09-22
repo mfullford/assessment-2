@@ -10,6 +10,27 @@ $(document).click(function() {
   });
 });
 
+
+function flicker(count, callback, current) {
+    current = current || 0;
+
+    $("#logo")[current % 2 == 0 ? 'hide' : 'show']();
+
+    setTimeout(function(){
+        if (count * 2 <= current) {
+            callback();
+            return;
+        }
+        flicker(count, callback, current + 1)
+    }, 100);
+}
+
+setTimeout(function () {
+    flicker(3, function () {
+        $("#logo").fadeIn("slow");
+    })
+}, 1000)
+
 // Get some sort of animation when pressing space for the second moto
 
 // document.body.onkeyup = function(e){
