@@ -36,3 +36,8 @@ $(document).click(function() {
 // ask if they would like to start again
 
 });
+
+
+
+// Your game must have a clear win condition
+// Add animations (really want to do stripes behind the moto objects)
