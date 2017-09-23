@@ -1,8 +1,4 @@
-font-face {
-    font-family: 'tronFont'; 
-    src: ('downloads/TRON.ttf'); 
-	format: ('opentype');
-}
+
 * {
 	font-family: 'tronFont', monospace;
 }
@@ -12,18 +8,22 @@ font-face {
 	position: relative;
 	width: 400px;
 }
-.moto {
-	position: absolute;
-}
+
 #motorcycleOne {
-	height: 50px;
-	margin-top: 80px;
+	height: 60px;
+	margin-top: 30px;
 	width: 100px;
+	position: relative;
+	padding-left: 0%;
+	background-color: #00cefb;
 }
 #motorcycleTwo {
-	height: 50px;
-	margin-top: 100px;
+	height: 60px;
 	width: 100px;
+	margin-top: 150px;
+	position: relative;
+	padding-left: 0%;
+	background-color: #00cefb;
 }
 .heading {
 	height: 15%;
@@ -32,7 +32,23 @@ font-face {
 	width: 80%;
 
 }
-
+p {
+	height: 70px;
+	padding-top: 25px;
+	margin-top: -95px;
+	margin-left: 10px;
+	border: 5px solid #00cefb;
+	text-align: center;
+	background-color: rgba(2, 218, 234, .50);
+    border-radius: 5px;
+	text-shadow: 0vw 0vw 1vw #00cefb;
+    text-shadow: 
+    -.1vw 0vw .25vw #03E6F7, -.2vw 0vw .25vw #03E6F7, -.4vw 0vw .25vw #03E6F7, 
+    -.1vw 0vw .1vw #04d0df, -.2vw 0vw .1vw #04d0df, -.4vw 0vw .1vw #04d0df,
+    -.1vw 0vw .8vw #04d0df, -.2vw 0vw .8vw #00CC2A, -.4vw 0vw .8vw #04d0df, .2vw 0vw .5vw #04d0df,
+    -.1vw 0vw .5vw #04d0df, -.2vw 0vw .5vw #04d0df, -.4vw 0vw .5vw #04d0df, 
+    -.1vw 0vw 10vw #02daea, -.2vw 0vw 10vw #02daea, -.4vw 0vw 10vw #02daea;
+}
 
 
 /*-----------landing-page-------------*/
@@ -76,17 +92,27 @@ font-face {
     -.1vw 0vw 10vw #02daea, -.2vw 0vw 10vw #02daea, -.4vw 0vw 10vw #02daea;
 }
 
-#begin a {
-	color: #FFFFFF;
-	text-decoration: none !;
-}
+/*audio { width: 300px; height: 30px; }*/
 
 
 /*    Make responsive for mobile and tablets
 Include a media query for a tablet to make your pages responsive*/
 
 
-/*    color: #03E6F7;
-    border: 5px solid #03E6F7;
-    background-color: rgba(3, 230, 247, .40);*/
+/*----- tablet ----*/
 
+
+@media and (min-device-width: 768px) and (max-device-width: 1024px)  {
+    .container {
+		background-image: url("http://pre12.deviantart.net/da7f/th/pre/i/2013/012/e/b/another_tron_type_floor_by_taz09-d5rbmoq.png");
+		background-size: 100%;
+		position: relative;
+		width: 200px;
+	}
+	.heading {
+		height: 15%;
+		margin-left: 10%;
+		margin-top: 10px;
+		width: 80%;
+	}
+}

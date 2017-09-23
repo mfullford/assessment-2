@@ -2,19 +2,41 @@ $(document).ready(function(e) {
 
 // Get some sort of clicking animation to move the first moto
 
-$(document).click(function() {
-  $( ".moto" ).animate({
-    left: "+=50",
-  }, 300, function() {
-    // Animation complete.
-  });
+// Shout out to Mike for walking me through this during lunch! 
+
+
+var bikeOne = $('#motorcycleOne');  //pulling in the first moto ID
+var bikeTwo = $('#motorcycleTwo');	//pulling in the second moto ID
+var oneMove = 0;				//We need some sort of start value
+var twoMove = 0;		
+
+$('body').keyup(function (e) {
+	if (e.keyCode == 90) {      //If I press the z key
+		oneMove += 10;          //move var oneMove up by 10 - th higher the number the faster the game
+		$('#motorcycleOne').css("padding-left", oneMove + "%");    //add that sweet lightning bar I wanted by pushing the padding out each time it moves
+	}
+	if(oneMove === 320) {       // It wins at the length of my desktop, sorry I didn't make a mobile version
+		alert("Winner: Player 1!");
+		location.reload();      // reload the game to reset at the beginning
+}
 });
 
+$('body').keyup(function (e) {
+	if (e.keyCode == 32) {
+		twoMove += 10;
+		$('#motorcycleTwo').css("padding-left", twoMove + "%");
+	if(twoMove === 320) {
+		alert("Winner: Player 2!");
+		location.reload();
+	}
+}
+});
 
-function flicker(count, callback, current) {
+// My flicker function for my neon sign 
+function flicker(count, callback, current) {  
     current = current || 0;
 
-    $("#logo")[current % 2 == 0 ? 'hide' : 'show']();
+    $("#begin")[current % 2 == 0 ? 'hide' : 'show']();
 
     setTimeout(function(){
         if (count * 2 <= current) {
@@ -27,38 +49,16 @@ function flicker(count, callback, current) {
 
 setTimeout(function () {
     flicker(3, function () {
-        $("#logo").fadeIn("slow");
+        $("#begin").fadeIn("fast");   //played with fading in slower, don't want it to take too long
     })
 }, 1000)
 
-// Get some sort of animation when pressing space for the second moto
 
-// document.body.onkeyup = function(e){
-//     if(e.keyCode == 32){
-//       $( "#motorcycleTwo" ).animate({
-//     	left: "+=50",
-//   		}, 400, function() {
-//     // Animation complete.
-//        });  
-//     }
-// }
 
-// $(window).keypress(function(e) {
-//     if (e.which === 32) {
-//   $( "#motorcycleTwo" ).animate({
-//     left: "+=50",
-//   }, 400, function() {
-//     // Animation complete.
-//   });
-// }});
-
-// once either crosses a certain length point, that person is declared the winner
-
-// ask if they would like to start again
 
 });
 
 
 
-// Your game must have a clear win condition
-// Add animations (really want to do stripes behind the moto objects)
+// Your game must have a clear win condition  CHECK
+// Add animations (really want to do stripes behind the moto objects) Didn't need animations to do this!
