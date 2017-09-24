@@ -27,7 +27,7 @@ $('body').keyup(function (e) {
 		$('#motorcycleTwo').css("padding-left", twoMove + "%");
 	if(twoMove === 320) {
 		alert("Winner: Player 2!");
-		location.reload();
+		location.reload();       // Handy dandy reload
 	}
 }
 });
